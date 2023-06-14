@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+pdkms := atlantic-dkms
+
+include /usr/share/dpkg/default.mk
+VERSION ?= $(shell echo $(DEB_VERSION_UPSTREAM) |cut -f 1 -d "-")
+
+%:
+	dh $@ --with dkms
+
+override_dh_dkms:
+	dh_dkms -V $(VERSION)
+
+override_dh_auto_build:
+	# Do nothing
+
+override_dh_auto_clean:
+	# Do nothing
+	rm -f debian/$(pdkms).install
+
+override_dh_auto_install:
+	sed -e 's/CVERSION/$(VERSION)/g' < debian/$(pdkms).install.in > debian/$(pdkms).install

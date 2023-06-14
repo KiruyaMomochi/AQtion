@@ -1,0 +1,14 @@
+Source: atlantic-dkms
+Section: misc
+Priority: optional
+Maintainer: Dynamic Kernel Modules Support Team <pkg-dkms-maint@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7),
+               debhelper-compat (= 12),
+			   dkms,
+Standards-Version: 4.5.0
+
+Package: atlantic-dkms
+Architecture: all
+Provides: atlantic-modules (= 2.5.5-1)
+Depends: dkms (>= 1.95), ${misc:Depends}
+Description: atlantic driver in DKMS format.

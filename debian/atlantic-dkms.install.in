@@ -1,0 +1,9 @@
+*.* usr/src/atlantic-CVERSION
+Kbuild usr/src/atlantic-CVERSION
+Kconfig usr/src/atlantic-CVERSION
+Makefile usr/src/atlantic-CVERSION
+
+hw_atl usr/src/atlantic-CVERSION
+hw_atl2 usr/src/atlantic-CVERSION
+kunit usr/src/atlantic-CVERSION
+macsec usr/src/atlantic-CVERSION

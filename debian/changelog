@@ -1,0 +1,6 @@
+atlantic-dkms (2.5.5-1) focal; urgency=low
+
+  * Automatically packaged by DKMS.
+
+ -- Dynamic Kernel Modules Support Team <pkg-dkms-maint@lists.alioth.debian.org>  Wed, 14 Jun 2023 08:30:21 +0000
+
